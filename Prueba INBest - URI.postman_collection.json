@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "968efae4-40ee-4beb-8723-fff4863c1f10",
+		"name": "Prueba INBest - URI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33151415"
+	},
+	"item": [
+		{
+			"name": "Paso 1: Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"diego\",\r\n    \"password\": \"diego123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paso 2: Subir imágen (ver headers y body)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMyNjQ3MDAzLCJpYXQiOjE3MzI2NDY3MDMsImp0aSI6IjM1NTE5MjI3MWU2MTQ3MWVhODNmN2EyNjg2ZDgzNDc5IiwidXNlcl9pZCI6MX0.Z9-CPlcacLIwfMSumTAaxiPQ5tIPcIX3aWGvDbcX8qk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1efac26c-8f5a-4050-98ea-c14adb35220e"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/images/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"images",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paso 3: Ver fotos (original)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/media/original_images/foto2.webp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"media",
+						"original_images",
+						"foto2.webp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paso 3.1: Ver fotos (escala de grises)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/media/processed_images/processed_4.jpg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"media",
+						"processed_images",
+						"processed_4.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
