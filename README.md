@@ -140,4 +140,5 @@ En donde se encuentra las directorios **backend** y **imageAPP** se nos creará 
     - *fotos subidas a escala de grises*
  
 #### En nuestro Bucket S3 se nos van a guardar las fotografías de igual manera que en el directorio de **media** en *VSCode*
-![image](https://github.com/user-attachments/assets/dcfecb42-bb8e-4f2d-b2a8-593851ba4ed1)
+![image](https://github.com/user-attachments/assets/558ef5c4-d1fd-4250-96c4-7e11721e076d)
+
